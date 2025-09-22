@@ -35,9 +35,6 @@ sudo fdesetup enable -user "$USER"
 # Enable macOS firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
-# Set Finder to show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
 # Set lock screen message
 sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Property of Atlantbh. If you find this computer, please call +387 33 716-550 or e-mail us at hello@atlantbh.com"
 
