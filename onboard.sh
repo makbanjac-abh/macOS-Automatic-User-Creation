@@ -21,10 +21,18 @@ fi
 # Create the admin user interactively
 sudo sysadminctl -addUser "$NEWUSER" -fullName "$FULLNAME" -admin -password "$PASSWORD"
 
-# Install Homebrew
+# Install Homebrew if not present
 if ! command -v brew &> /dev/null; then
+  echo "Homebrew not found. Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # Add Homebrew to PATH for this session (Apple Silicon and Intel Macs)
+  if [ -d "/opt/homebrew/bin" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [ -d "/usr/local/bin" ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
 fi
+
 
 # Install Slack
 brew install --cask slack
