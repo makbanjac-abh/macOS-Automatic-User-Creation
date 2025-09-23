@@ -5,5 +5,3 @@ Note that if you would like to run the script as an app(executable), you should 
 3. The script will prompt for your password as well, the user running it, multiple times.
 4. Allow whichever permission it requests.
 5. Voila! Read the checklist for any errors.
-
-[Go](https://www.google.com/)
