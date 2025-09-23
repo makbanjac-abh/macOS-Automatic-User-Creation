@@ -6,4 +6,4 @@ Note that if you would like to run the script as an app(executable), you should 
 4. Allow whichever permission it requests.
 5. Voila! Read the checklist for any errors.
 
-[Go](#www.google.com)
+[Go](#https://www.google.com)
